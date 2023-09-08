@@ -119,6 +119,7 @@ function onSaveClick() {
   const a = document.createElement("a");
   a.href = url;
   a.download = "myDrawing.png";
+  // console.log(a);
   a.click();
 }
 
