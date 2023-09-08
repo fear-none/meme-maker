@@ -29,7 +29,6 @@ function onMove(event) {
     ctx.stroke();
     return;
   }
-  ctx.beginPath();
   ctx.moveTo(event.offsetX, event.offsetY);
 }
 
@@ -39,6 +38,8 @@ function startPainting() {
 
 function cancelPainting() {
   isPainting = false;
+  // ctx.fill();
+  ctx.beginPath();
 }
 
 function onLineWidthChange(event) {
@@ -107,7 +108,7 @@ function onDoubleClick(event) {
   if (text !== "") {
     ctx.save();
     ctx.lineWidth = 1;
-    ctx.font = "68px serif";
+    ctx.font = "68px sans-serif";
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();
   }
